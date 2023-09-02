@@ -66,6 +66,13 @@ struct ContentView: View {
     }
 }
 
-#Preview("Picker") {
-    return ContentView()
+
+//#Preview("Picker") {
+//    return ContentView()
+//}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
