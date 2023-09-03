@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC55504F2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */; };
 		DCC83DC42AA313D7001761FD /* SwiftUI100DaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC83DC32AA313D7001761FD /* SwiftUI100DaysApp.swift */; };
 		DCC83DC62AA313D7001761FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC83DC52AA313D7001761FD /* ContentView.swift */; };
 		DCC83DC82AA313D9001761FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC83DC72AA313D9001761FD /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewChallenge_1.swift; sourceTree = "<group>"; };
 		DCC83DC02AA313D7001761FD /* SwiftUI100Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI100Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC83DC32AA313D7001761FD /* SwiftUI100DaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI100DaysApp.swift; sourceTree = "<group>"; };
 		DCC83DC52AA313D7001761FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +35,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC55504D2AA4ED2C0028D3F0 /* Challenge-1 */ = {
+			isa = PBXGroup;
+			children = (
+				DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */,
+			);
+			path = "Challenge-1";
+			sourceTree = "<group>";
+		};
 		DCC83DB72AA313D7001761FD = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +62,7 @@
 		DCC83DC22AA313D7001761FD /* SwiftUI100Days */ = {
 			isa = PBXGroup;
 			children = (
+				DC55504D2AA4ED2C0028D3F0 /* Challenge-1 */,
 				DCC83DD12AA3D65C001761FD /* Info.plist */,
 				DCC83DC32AA313D7001761FD /* SwiftUI100DaysApp.swift */,
 				DCC83DC52AA313D7001761FD /* ContentView.swift */,
@@ -140,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCC83DC62AA313D7001761FD /* ContentView.swift in Sources */,
+				DC55504F2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift in Sources */,
 				DCC83DC42AA313D7001761FD /* SwiftUI100DaysApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

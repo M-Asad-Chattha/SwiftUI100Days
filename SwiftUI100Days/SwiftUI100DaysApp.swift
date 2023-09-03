@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI100DaysApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentViewChallenge_1()
         }
     }
 }
