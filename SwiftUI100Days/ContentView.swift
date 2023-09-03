@@ -13,16 +13,23 @@ struct ContentView: View {
     @State private var tipPercentage = 15
     @FocusState private var amountIsFocused: Bool
     
-    private let tipPercentages = [10, 15, 20, 25, 0]
+    var totalAmount: Double {
+        // Calculate the total
+        let tipSelection = Double(tipPercentage)
+        let tipValue = (checkAmount / 100) * tipSelection
+        let grandTotal = checkAmount + tipValue
+        return grandTotal
+    }
     
     var totalPerPerson: Double {
         // Calculate the total per person
         let peopleCount = Double(numberOfPeople)
-        let tipSelection = Double(tipPercentage)
-        let tipValue = (checkAmount / 100) * tipSelection
-        let grandTotal = checkAmount + tipValue
-        let amountPerPerson =  grandTotal / peopleCount
+        let amountPerPerson = totalAmount / peopleCount
         return amountPerPerson
+    }
+    
+    var localCurrencyFormat: FloatingPointFormatStyle<Double>.Currency {
+        .currency(code: Locale.current.currency?.identifier ?? "USD")
     }
     
     var body: some View {
@@ -42,16 +49,21 @@ struct ContentView: View {
                 
                 Section("How much tip do you want to leave?") {
                     Picker("Tip Percentage", selection: $tipPercentage) {
-                        ForEach(tipPercentages, id: \.self) {
+                        ForEach(0..<101, id: \.self) {
                             Text($0, format: .percent)
                         }
                     }
-                    .pickerStyle(.segmented)
+                    .pickerStyle(.navigationLink)
+                }
+                
+                Section("Total Amount") {
+                    Text(totalAmount, format: localCurrencyFormat)
                 }
                 
                 Section("Amount per person") {
-                    Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    Text(totalPerPerson, format: localCurrencyFormat)
                 }
+                
             }
             .navigationTitle("WeSplit")
             .toolbar {
