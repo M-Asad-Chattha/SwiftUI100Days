@@ -18,10 +18,16 @@ struct ContentViewProject_2: View {
 //            Gradient.Stop(color: .black, location: 0.55)
 //        ]), startPoint: .top, endPoint: .bottom)
         // OR
-        LinearGradient(gradient: Gradient(stops: [
-            .init(color: .white, location: 0.45),
-            .init(color: .black, location: 0.55)
-        ]), startPoint: .top, endPoint: .bottom)
+//        LinearGradient(gradient: Gradient(stops: [
+//            .init(color: .white, location: 0.45),
+//            .init(color: .black, location: 0.55)
+//        ]), startPoint: .top, endPoint: .bottom)
+        
+        // Radial Gradient
+//        RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 20, endRadius: 200)
+        
+        // Angular Gradient
+        AngularGradient.init(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center)
     }
 }
 
