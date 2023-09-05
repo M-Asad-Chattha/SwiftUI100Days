@@ -9,17 +9,8 @@ import SwiftUI
 
 struct ContentViewProject_2: View {
     var body: some View {
-        ZStack {
-            VStack(spacing: 0) {
-                Color.red
-                Color.blue
-            }
-            
-            Text("This is Button")
-                .foregroundStyle(.primary)
-                .padding(50)
-                .background(.ultraThinMaterial )
-        }
+//        LinearGradient(colors: [.red, .green, .blue], startPoint: .top, endPoint: .bottom)
+        LinearGradient(colors: [.white, .black], startPoint: .top, endPoint: .bottom)
     }
 }
 
