@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentViewProject_2: View {
+    @State private var showingAlert = false
+    
     var body: some View {
 //        LinearGradient(colors: [.red, .green, .blue], startPoint: .top, endPoint: .bottom)
 //        LinearGradient(colors: [.white, .black], startPoint: .top, endPoint: .bottom)
@@ -27,7 +29,17 @@ struct ContentViewProject_2: View {
 //        RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 20, endRadius: 200)
         
         // Angular Gradient
-        AngularGradient.init(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center)
+//        AngularGradient.init(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center)
+        
+        Button("Show Alert") {
+           showingAlert = true
+        }
+        .alert("Important Message ", isPresented: $showingAlert) {
+            Button("Delete", role: .destructive) {}
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("Please read this")
+        }
     }
 }
 
