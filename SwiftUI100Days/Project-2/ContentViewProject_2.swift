@@ -15,6 +15,9 @@ struct ContentViewProject_2: View {
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
     @State private var score = 0
+    @State private var alertMessage = ""
+    @State private var numberOfQuestions = 0
+    @State private var alertButtonTitle = "Continue"
     
     var body: some View {
         ZStack {
@@ -68,11 +71,10 @@ struct ContentViewProject_2: View {
             .padding()
         }
         .alert(scoreTitle, isPresented: $showingScore) {
-            Button("Continue", action: askQuestion)
+            Button(alertButtonTitle, action: askQuestion)
         } message: {
-            Text("Your score is \(score)")
+            Text(alertMessage)
         }
-        
     }
 }
 
@@ -84,14 +86,26 @@ struct ContentViewProject_2: View {
 // MARK: - Helper Methods
 extension ContentViewProject_2 {
     private func flagButtonTapped(_ number: Int){
-        scoreTitle = (number == correctAnswer) ? "Correct Answer" : "Wrong Answer"
+        numberOfQuestions += 1
         score += (number == correctAnswer) ? 1 : 0
+        alertButtonTitle = (numberOfQuestions < 8) ? "Continue" : "Reset"
+        scoreTitle = (number == correctAnswer) ? "Correct Answer" : "Wrong Answer"
+        alertMessage = (number == correctAnswer) ? "You score is \(score)" : "Wrong! That's the flag of \(countries[number])"
         showingScore = true
+        print("Questins: \(numberOfQuestions)")
     }
     
     private func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        resetGame()
+    }
+    
+    private func resetGame() {
+        if numberOfQuestions == 8 {
+            score = 0
+            numberOfQuestions = 0
+        }
     }
 }
 
