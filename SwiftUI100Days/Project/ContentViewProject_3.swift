@@ -49,6 +49,26 @@ extension View {
     }
 }
 
+// MARK: - Custom Container
+struct GridStack <Content: View>: View {
+    let rows: Int
+    let columns: Int
+    let content: (Int, Int) -> Content
+    
+    var body: some View {
+        VStack {
+            ForEach(0..<rows, id: \.self) { row in
+                HStack {
+                    ForEach(0..<columns, id: \.self) { column in
+                        content(row, column)
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 struct ContentViewProject_3: View {
     var body: some View {
 //        Text("AA")
@@ -68,9 +88,14 @@ struct ContentViewProject_3: View {
 //        }
         
         // Apply Custome Modifier extened by View and text
-        Color.red
-            .frame(width: 300, height: 200)
-            .waterMarked(with: "Asad Chatthe")
+//        Color.red
+//            .frame(width: 300, height: 200)
+//            .waterMarked(with: "Asad Chatthe")
+        
+        // Custom Container
+        GridStack(rows: 3, columns: 4) { row, col in
+            Text("R\(row) C\(col)")
+        }
     }
 }
 
