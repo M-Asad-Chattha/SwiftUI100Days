@@ -68,6 +68,20 @@ struct GridStack <Content: View>: View {
     }
 }
 
+// -------------- CHALLENGE ----------------
+struct LargeBlueTitle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .foregroundStyle(.blue)
+    }
+}
+extension View {
+    func prominentTitle() -> some View {
+        modifier(LargeBlueTitle())
+    }
+}
+
 
 struct ContentViewProject_3: View {
     var body: some View {
@@ -93,9 +107,13 @@ struct ContentViewProject_3: View {
 //            .waterMarked(with: "Asad Chatthe")
         
         // Custom Container
-        GridStack(rows: 3, columns: 4) { row, col in
-            Text("R\(row) C\(col)")
-        }
+//        GridStack(rows: 3, columns: 4) { row, col in
+//            Text("R\(row) C\(col)")
+//        }
+        
+        // Prominent Title
+        Text("Lerge Blue Prominent Title")
+            .prominentTitle()
     }
 }
 
