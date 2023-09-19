@@ -7,6 +7,18 @@
 
 import SwiftUI
 
+// MARK: -  Flag View
+struct FlagImage: View {
+    var name: String
+    var body: some View {
+        Image(name)
+            .renderingMode(.original)
+            .clipShape(.rect(cornerRadius: 5))
+            .shadow(radius: 5)
+    }
+}
+
+
 struct ContentViewProject_2: View {
     
     // MARK: - State
@@ -49,10 +61,11 @@ struct ContentViewProject_2: View {
                             Button {
                                 flagButtonTapped(number)
                             } label: {
-                                Image(countries[number])
-                                    .renderingMode(.original)
-                                    .clipShape(.rect(cornerRadius: 5))
-                                    .shadow(radius: 5)
+//                                Image(countries[number])
+//                                    .renderingMode(.original)
+//                                    .clipShape(.rect(cornerRadius: 5))
+//                                    .shadow(radius: 5)
+                                FlagImage(name: countries[number])
                             }
                         }
                 }
