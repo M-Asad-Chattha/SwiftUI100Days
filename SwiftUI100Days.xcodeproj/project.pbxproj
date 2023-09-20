@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC2705872ABB691F008EFFF5 /* ContentViewChallenge-2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2705862ABB691F008EFFF5 /* ContentViewChallenge-2.swift */; };
 		DC55504F2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */; };
 		DC5550532AA507E50028D3F0 /* ContentViewProject_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5550522AA507E50028D3F0 /* ContentViewProject_2.swift */; };
 		DCC83DC42AA313D7001761FD /* SwiftUI100DaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC83DC32AA313D7001761FD /* SwiftUI100DaysApp.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC2705862ABB691F008EFFF5 /* ContentViewChallenge-2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentViewChallenge-2.swift"; sourceTree = "<group>"; };
 		DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewChallenge_1.swift; sourceTree = "<group>"; };
 		DC5550522AA507E50028D3F0 /* ContentViewProject_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewProject_2.swift; sourceTree = "<group>"; };
 		DCC83DC02AA313D7001761FD /* SwiftUI100Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI100Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */,
+				DC2705862ABB691F008EFFF5 /* ContentViewChallenge-2.swift */,
 			);
 			path = "Challenge-1";
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCC83DC62AA313D7001761FD /* ContentView.swift in Sources */,
+				DC2705872ABB691F008EFFF5 /* ContentViewChallenge-2.swift in Sources */,
 				DC55504F2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift in Sources */,
 				DCC83DC42AA313D7001761FD /* SwiftUI100DaysApp.swift in Sources */,
 				DC5550532AA507E50028D3F0 /* ContentViewProject_2.swift in Sources */,
