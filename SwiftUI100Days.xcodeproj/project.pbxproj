@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC2705892ABB7C40008EFFF5 /* Project_4.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2705882ABB7C40008EFFF5 /* Project_4.swift */; };
+		DC27058E2ABB812E008EFFF5 /* SleepCalculator.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = DC27058D2ABB812E008EFFF5 /* SleepCalculator.mlpackage */; };
+		DC2705902ABB82D2008EFFF5 /* BetterRest.csv in Resources */ = {isa = PBXBuildFile; fileRef = DC27058F2ABB82D2008EFFF5 /* BetterRest.csv */; };
 		DC55504F2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */; };
 		DC5550532AA507E50028D3F0 /* ContentViewProject_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5550522AA507E50028D3F0 /* ContentViewProject_2.swift */; };
 		DCC83DC42AA313D7001761FD /* SwiftUI100DaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC83DC32AA313D7001761FD /* SwiftUI100DaysApp.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC2705882ABB7C40008EFFF5 /* Project_4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_4.swift; sourceTree = "<group>"; };
+		DC27058D2ABB812E008EFFF5 /* SleepCalculator.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = SleepCalculator.mlpackage; sourceTree = "<group>"; };
+		DC27058F2ABB82D2008EFFF5 /* BetterRest.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BetterRest.csv; sourceTree = "<group>"; };
 		DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewChallenge_1.swift; sourceTree = "<group>"; };
 		DC5550522AA507E50028D3F0 /* ContentViewProject_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewProject_2.swift; sourceTree = "<group>"; };
 		DCC83DC02AA313D7001761FD /* SwiftUI100Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI100Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,20 +43,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DC55504D2AA4ED2C0028D3F0 /* Challenge-1 */ = {
+		DC27058A2ABB80E9008EFFF5 /* Helping Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC27058F2ABB82D2008EFFF5 /* BetterRest.csv */,
+				DC27058D2ABB812E008EFFF5 /* SleepCalculator.mlpackage */,
+			);
+			path = "Helping Files";
+			sourceTree = "<group>";
+		};
+		DC55504D2AA4ED2C0028D3F0 /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
 				DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */,
 			);
-			path = "Challenge-1";
+			path = Challenge;
 			sourceTree = "<group>";
 		};
-		DC5550502AA507870028D3F0 /* Project-2 */ = {
+		DC5550502AA507870028D3F0 /* Project */ = {
 			isa = PBXGroup;
 			children = (
 				DC5550522AA507E50028D3F0 /* ContentViewProject_2.swift */,
+				DC2705882ABB7C40008EFFF5 /* Project_4.swift */,
 			);
-			path = "Project-2";
+			path = Project;
 			sourceTree = "<group>";
 		};
 		DC5550512AA507A00028D3F0 /* App Files */ = {
@@ -81,9 +97,10 @@
 		DCC83DC22AA313D7001761FD /* SwiftUI100Days */ = {
 			isa = PBXGroup;
 			children = (
-				DC55504D2AA4ED2C0028D3F0 /* Challenge-1 */,
-				DC5550502AA507870028D3F0 /* Project-2 */,
+				DC55504D2AA4ED2C0028D3F0 /* Challenge */,
+				DC5550502AA507870028D3F0 /* Project */,
 				DC5550512AA507A00028D3F0 /* App Files */,
+				DC27058A2ABB80E9008EFFF5 /* Helping Files */,
 				DCC83DD12AA3D65C001761FD /* Info.plist */,
 				DCC83DC72AA313D9001761FD /* Assets.xcassets */,
 				DCC83DC92AA313D9001761FD /* Preview Content */,
@@ -158,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCC83DCB2AA313D9001761FD /* Preview Assets.xcassets in Resources */,
+				DC2705902ABB82D2008EFFF5 /* BetterRest.csv in Resources */,
 				DCC83DC82AA313D9001761FD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +190,8 @@
 				DCC83DC62AA313D7001761FD /* ContentView.swift in Sources */,
 				DC55504F2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift in Sources */,
 				DCC83DC42AA313D7001761FD /* SwiftUI100DaysApp.swift in Sources */,
+				DC2705892ABB7C40008EFFF5 /* Project_4.swift in Sources */,
+				DC27058E2ABB812E008EFFF5 /* SleepCalculator.mlpackage in Sources */,
 				DC5550532AA507E50028D3F0 /* ContentViewProject_2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

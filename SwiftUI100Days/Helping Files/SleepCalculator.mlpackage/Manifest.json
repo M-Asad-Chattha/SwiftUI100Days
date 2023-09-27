@@ -1,0 +1,24 @@
+{
+    "fileFormatVersion": "1.0.0",
+    "itemInfoEntries": {
+        "0534A786-8578-49B4-88D9-C7817871A183": {
+            "author": "com.apple.CoreML",
+            "description": "CoreML Model Specification",
+            "name": "SleepCalculator.mlmodel",
+            "path": "com.apple.CoreML/SleepCalculator.mlmodel"
+        },
+        "1CABC073-278F-4940-B069-878A473065DA": {
+            "author": "com.apple.CoreML",
+            "description": "External Metadata Overlay",
+            "name": "Metadata.json",
+            "path": "com.apple.CoreML/Metadata.json"
+        },
+        "A8FAC3B4-89EB-4B2E-A567-A2128C126705": {
+            "author": "com.apple.CoreML",
+            "description": "External FeatureDescription Overlay",
+            "name": "FeatureDescriptions.json",
+            "path": "com.apple.CoreML/FeatureDescriptions.json"
+        }
+    },
+    "rootModelIdentifier": "0534A786-8578-49B4-88D9-C7817871A183"
+}
