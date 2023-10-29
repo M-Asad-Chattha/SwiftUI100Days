@@ -7,11 +7,23 @@
 
 import SwiftUI
 
+struct BlueColor: ViewModifier {
+    make
+}
+
 struct ContentViewProject_2: View {
     
     var body: some View {
-        Text("Hello World!")
+        ScrollView(.vertical){
+           
+            
+            VStack{
+                Text("hello")
+            }
+        }
+       
     }
+    
 }
 
 #Preview {
