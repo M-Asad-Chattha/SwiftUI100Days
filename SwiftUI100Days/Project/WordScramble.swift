@@ -9,39 +9,42 @@
 import SwiftUI
 
 struct WordScramble: View {
-    let people = ["person1", "person2", "person3", "person4", "person5", "person6", "person7", "person8", "person9", "person10"]
-
+    @State private var usedWords = [String]()
+    @State private var rootWord = ""
+    @State private var newWord = ""
+    
     var body: some View {
         NavigationView {
             List {
-                Button("Check Spelling") {
-                    spellCheck(word: "Swifto")
+                Section {
+                    TextField("Enter a word", text: $newWord)
+                        .autocapitalization(.none)
                 }
-                
-                Section("Dynamic Data") {
-                    ForEach(people, id: \.self) {
-                        Text("Row \($0)")
+
+                Section {
+                    ForEach(usedWords, id: \.self) { word in
+                        HStack {
+                            Image(systemName: "\(word.count).circle")
+                            Text(word)
+                        }
                     }
                 }
             }
-            .navigationTitle("Word Scramble")
+            .navigationTitle(rootWord)
+            .onSubmit { addNewWord() }
         }
     }
 }
 
 // MARK: - Helper Methods
 extension WordScramble {
-    func randomPerson() -> String {
-        people.randomElement() ?? "person1"
-    }
-    
-    func spellCheck(word: String) {
-        let checker = UITextChecker()
+    func addNewWord() {
+        let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        // exit if the answer is empty
+        guard answer.count > 0 else { return }
         
-        let range = NSRange(location: 0, length: word.utf16.count)
-        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
-        print(misspelledRange)
-        print(misspelledRange.location == NSNotFound)
+        withAnimation { usedWords.insert(answer, at: 0) }
+        newWord = ""
     }
 }
 
