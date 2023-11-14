@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD2FBFC02AFE5D6700E0D39E /* ContentViewProject_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2FBFBF2AFE5D6700E0D39E /* ContentViewProject_5.swift */; };
 		DC55504F2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */; };
 		DC5550532AA507E50028D3F0 /* ContentViewProject_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5550522AA507E50028D3F0 /* ContentViewProject_2.swift */; };
 		DCC3A66C2AB94F6000B76961 /* ContentViewProject_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC3A66B2AB94F6000B76961 /* ContentViewProject_3.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD2FBFBF2AFE5D6700E0D39E /* ContentViewProject_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewProject_5.swift; sourceTree = "<group>"; };
 		DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewChallenge_1.swift; sourceTree = "<group>"; };
 		DC5550522AA507E50028D3F0 /* ContentViewProject_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewProject_2.swift; sourceTree = "<group>"; };
 		DCC3A66B2AB94F6000B76961 /* ContentViewProject_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewProject_3.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			children = (
 				DC5550522AA507E50028D3F0 /* ContentViewProject_2.swift */,
 				DCC3A66B2AB94F6000B76961 /* ContentViewProject_3.swift */,
+				AD2FBFBF2AFE5D6700E0D39E /* ContentViewProject_5.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD2FBFC02AFE5D6700E0D39E /* ContentViewProject_5.swift in Sources */,
 				DCC83DC62AA313D7001761FD /* ContentView.swift in Sources */,
 				DC55504F2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift in Sources */,
 				DCC3A66C2AB94F6000B76961 /* ContentViewProject_3.swift in Sources */,
