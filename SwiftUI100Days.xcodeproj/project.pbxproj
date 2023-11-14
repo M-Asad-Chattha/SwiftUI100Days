@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD2FBFC02AFE5D6700E0D39E /* ContentViewProject_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2FBFBF2AFE5D6700E0D39E /* ContentViewProject_5.swift */; };
+		AD2FBFC02AFE5D6700E0D39E /* WordScramble.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2FBFBF2AFE5D6700E0D39E /* WordScramble.swift */; };
 		DC55504F2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */; };
 		DC5550532AA507E50028D3F0 /* ContentViewProject_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5550522AA507E50028D3F0 /* ContentViewProject_2.swift */; };
 		DCC3A66C2AB94F6000B76961 /* ContentViewProject_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC3A66B2AB94F6000B76961 /* ContentViewProject_3.swift */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AD2FBFBF2AFE5D6700E0D39E /* ContentViewProject_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewProject_5.swift; sourceTree = "<group>"; };
+		AD2FBFBF2AFE5D6700E0D39E /* WordScramble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScramble.swift; sourceTree = "<group>"; };
 		DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewChallenge_1.swift; sourceTree = "<group>"; };
 		DC5550522AA507E50028D3F0 /* ContentViewProject_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewProject_2.swift; sourceTree = "<group>"; };
 		DCC3A66B2AB94F6000B76961 /* ContentViewProject_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewProject_3.swift; sourceTree = "<group>"; };
@@ -54,18 +54,18 @@
 			children = (
 				DC5550522AA507E50028D3F0 /* ContentViewProject_2.swift */,
 				DCC3A66B2AB94F6000B76961 /* ContentViewProject_3.swift */,
-				AD2FBFBF2AFE5D6700E0D39E /* ContentViewProject_5.swift */,
+				AD2FBFBF2AFE5D6700E0D39E /* WordScramble.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
 		};
-		DC5550512AA507A00028D3F0 /* App Files */ = {
+		DC5550512AA507A00028D3F0 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				DCC83DC52AA313D7001761FD /* ContentView.swift */,
 				DCC83DC32AA313D7001761FD /* SwiftUI100DaysApp.swift */,
 			);
-			path = "App Files";
+			path = App;
 			sourceTree = "<group>";
 		};
 		DCC83DB72AA313D7001761FD = {
@@ -89,7 +89,7 @@
 			children = (
 				DC55504D2AA4ED2C0028D3F0 /* Challenge */,
 				DC5550502AA507870028D3F0 /* Project */,
-				DC5550512AA507A00028D3F0 /* App Files */,
+				DC5550512AA507A00028D3F0 /* App */,
 				DCC83DD12AA3D65C001761FD /* Info.plist */,
 				DCC83DC72AA313D9001761FD /* Assets.xcassets */,
 				DCC83DC92AA313D9001761FD /* Preview Content */,
@@ -175,7 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD2FBFC02AFE5D6700E0D39E /* ContentViewProject_5.swift in Sources */,
+				AD2FBFC02AFE5D6700E0D39E /* WordScramble.swift in Sources */,
 				DCC83DC62AA313D7001761FD /* ContentView.swift in Sources */,
 				DC55504F2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift in Sources */,
 				DCC3A66C2AB94F6000B76961 /* ContentViewProject_3.swift in Sources */,

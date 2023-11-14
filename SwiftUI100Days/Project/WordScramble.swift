@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ContentViewProject_5: View {
+struct WordScramble: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    ContentViewProject_5()
+    WordScramble()
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI100DaysApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentViewProject_3()
+            WordScramble()
         }
     }
 }
