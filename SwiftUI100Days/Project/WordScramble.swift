@@ -14,13 +14,13 @@ struct WordScramble: View {
     @State private var newWord = ""
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 Section {
-                    TextField("Enter a word", text: $newWord)
+                    TextField("Enter your word", text: $newWord)
                         .autocapitalization(.none)
                 }
-
+                
                 Section {
                     ForEach(usedWords, id: \.self) { word in
                         HStack {
@@ -31,7 +31,8 @@ struct WordScramble: View {
                 }
             }
             .navigationTitle(rootWord)
-            .onSubmit { addNewWord() }
+            .onSubmit(addNewWord)
+            .onAppear(perform: startGame)
         }
     }
 }
@@ -40,11 +41,21 @@ struct WordScramble: View {
 extension WordScramble {
     func addNewWord() {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
-        // exit if the answer is empty
-        guard answer.count > 0 else { return }
-        
+        guard answer.count > 0 else { return } // exit if the answer is empty
         withAnimation { usedWords.insert(answer, at: 0) }
         newWord = ""
+    }
+    
+    func startGame() {
+        if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
+            if let startWords = try? String(contentsOf: startWordsURL) {
+                let allWords = startWords.components(separatedBy: "\n")
+                rootWord = allWords.randomElement() ?? "silkworm"
+                return
+            }
+        }
+        
+        fatalError("Could not load start.txt from bundle.")
     }
 }
 
