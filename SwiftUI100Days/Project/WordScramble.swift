@@ -108,6 +108,7 @@ extension WordScramble {
         alertTitle = title
         alertMessage = message
         showingAlert = true
+        
     }
 }
 
