@@ -12,6 +12,7 @@ struct WordScramble: View {
     @State private var usedWords = [String]()
     @State private var rootWord = ""
     @State private var newWord = ""
+    @State private var score = 0
     
     @State private var alertTitle = ""
     @State private var alertMessage = ""
@@ -24,6 +25,10 @@ struct WordScramble: View {
                     TextField("Enter your word", text: $newWord)
                         .autocapitalization(.none)
                         .autocorrectionDisabled()
+                }
+                
+                Section("Score") {
+                    Text(String(score))
                 }
                 
                 Section {
@@ -41,6 +46,11 @@ struct WordScramble: View {
             .alert(alertTitle, isPresented: $showingAlert, actions: {}) {
                 Text(alertMessage)
             }
+            .toolbar {
+                ToolbarItem {
+                    Button("Restart", action: startGame)
+                }
+            }
         }
     }
 }
@@ -50,6 +60,11 @@ extension WordScramble {
     func addNewWord() {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         guard answer.count > 0 else { return } // exit if the answer is empty
+        
+        guard !isShortWord(word: answer) else {
+            showError(title: "Word is Short", message: "Word must be at least 3 characters long")
+            return
+        }
         
         guard isOriginal(word: answer) else {
             showError(title: "Word used already", message: "Be more original")
@@ -65,10 +80,12 @@ extension WordScramble {
         }
         
         withAnimation { usedWords.insert(answer, at: 0) }
+        calculateScore()
         newWord = ""
     }
     
     func startGame() {
+        resetGame()
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             if let startWords = try? String(contentsOf: startWordsURL) {
                 let allWords = startWords.components(separatedBy: "\n")
@@ -109,6 +126,21 @@ extension WordScramble {
         alertMessage = message
         showingAlert = true
         
+    }
+    
+    func isShortWord(word: String) -> Bool {
+        return word.count < 3
+    }
+    
+    func calculateScore() {
+        let words = usedWords.compactMap { $0.count }
+        let sum = words.reduce(0) { $0 + $1 }
+        score = sum
+    }
+    
+    func resetGame() {
+        score = 0
+        usedWords.removeAll()
     }
 }
 
