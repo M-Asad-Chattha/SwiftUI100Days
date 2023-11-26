@@ -10,32 +10,26 @@ import SwiftUI
 struct Animations: View {
     
     // MARK: - State
-    @State private var enabled = false
-    @State private var dragAmount = CGSize.zero
+    @State private var isShowingRed = false
     
     // MARK: - Properties
-    let letters = Array("Hello, SwiftUI!")
 
     // MARK: - Body
     var body: some View {
-        HStack(spacing: 0) {
-            ForEach(0..<letters.count, id: \.self) { number in
-                Text(String(letters[number]))
-                    .padding(5)
-                    .font(.title)
-                    .background(enabled ? .blue : .orange)
-                    .offset(dragAmount)
-                    .animation(.linear.delay(Double(number) / 20), value: dragAmount)
+        VStack {
+            Button("Tap Me") {
+                withAnimation { isShowingRed.toggle() }
+            }
+            
+            if isShowingRed {
+                Rectangle()
+                    .fill(.red)
+                    .frame(width: 200, height: 200)
+                    .clipShape(.rect(cornerRadius: 10))
+                    // .transition(.scale) // Scaling from smallest to largest (declraed size)
+                    .transition(.asymmetric(insertion: .scale, removal: .opacity)) // Use one transition when the view is being shown and another when it’s disappearing.
             }
         }
-        .gesture(
-            DragGesture()
-                .onChanged { dragAmount = $0.translation }
-                .onEnded {_ in
-                    dragAmount = .zero
-                    enabled.toggle()
-                }
-        )
     }
 }
 
