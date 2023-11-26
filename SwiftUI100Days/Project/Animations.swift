@@ -10,23 +10,18 @@ import SwiftUI
 struct Animations: View {
 
     // MARK: - @State
-    @State private var animationAmount = 0.0
+    @State private var enabled = false
 
     var body: some View {
         Button("Tap me") {
-            withAnimation(.spring(duration: 1, bounce: 0.5)) {
-                animationAmount += 360
-            } completion: {
-                animationAmount = 0.0
-            }
+            enabled.toggle()
         }
-        .padding(50)
-        .background(.red)
+        .frame(width: 200, height: 200)
+        .background(enabled ? .blue : .gray)
         .foregroundStyle(.white)
-        .clipShape(.circle)
-        .rotation3DEffect(
-            .degrees(animationAmount), axis: (x: 0, y: 1, z: 0)
-        )
+        .animation(nil, value: enabled) // nil will not apply any animation to all above modifiers
+        .clipShape(.rect(cornerRadius: enabled ? 60 : 0))
+        .animation(.spring(duration: 1, bounce: 0.9), value: enabled) // Coz above animation is nil, So this animation will only apply to clipshape modifier
     }
 }
 
