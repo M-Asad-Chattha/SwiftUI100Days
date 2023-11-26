@@ -9,19 +9,40 @@ import SwiftUI
 
 struct Animations: View {
 
+    var body: some View {
+        Flag()
+    }
+}
+
+/// Draggable Flag with Animation Effect
+struct Flag: View {
+
     // MARK: - @State
-    @State private var enabled = false
+    @State private var dragAmount: CGSize  = .zero
 
     var body: some View {
-        Button("Tap me") {
-            enabled.toggle()
-        }
-        .frame(width: 200, height: 200)
-        .background(enabled ? .blue : .gray)
-        .foregroundStyle(.white)
-        .animation(nil, value: enabled) // nil will not apply any animation to all above modifiers
-        .clipShape(.rect(cornerRadius: enabled ? 60 : 0))
-        .animation(.spring(duration: 1, bounce: 0.9), value: enabled) // Coz above animation is nil, So this animation will only apply to clipshape modifier
+        LinearGradient(gradient: Gradient(stops: [
+            .init(color: .white, location: 0.2),
+            .init(color: .green, location: 0.2)
+        ]), startPoint: .leading, endPoint: .trailing)
+        .frame(width: 300, height: 200)
+        .clipShape(.rect(cornerRadius: 10))
+
+        .overlay(
+            Image(.icMoonStar)
+                .resizable()
+                .scaledToFit()
+                .scaleEffect(0.7)
+        )
+        .offset(dragAmount)
+        .gesture(
+            DragGesture()
+                .onChanged{ dragAmount = $0.translation }
+                .onEnded { _ in
+                    // Reset the drag amount
+                    withAnimation(.bouncy()) { dragAmount = CGSize.zero }
+                }
+        )
     }
 }
 
