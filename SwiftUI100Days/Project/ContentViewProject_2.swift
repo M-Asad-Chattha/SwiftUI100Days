@@ -13,6 +13,8 @@ struct ContentViewProject_2: View {
     
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
+    @State private var isSpinning: Bool = false
+    @State private var selectedFlag: Int?
     
     var body: some View {
         ZStack {
@@ -47,6 +49,9 @@ struct ContentViewProject_2: View {
                                 .renderingMode(.original)
                                 .clipShape(Capsule())
                                 .shadow(radius: 5)
+                                .opacity(selectedFlag == nil || selectedFlag == number ? 1 : 0.25)
+                                .scaleEffect(selectedFlag == nil || selectedFlag == number ? 1 : 0.5)
+                                .rotation3DEffect(.degrees(isSpinning ? 360 : 0), axis: (x: 0, y: 1, z: 0))
                         }
                     }
                 }
@@ -74,6 +79,9 @@ struct ContentViewProject_2: View {
     }
     
     func flagTapped(_ number: Int) {
+        isSpinning.toggle()
+        withAnimation { selectedFlag = number }
+        
         if number == correctAnswer {
             scoreTitle = "Correct"
         } else {
@@ -86,6 +94,7 @@ struct ContentViewProject_2: View {
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        withAnimation { selectedFlag = nil }
     }
     
 }
