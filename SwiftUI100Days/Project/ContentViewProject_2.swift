@@ -80,6 +80,7 @@ struct ContentViewProject_2: View {
     
     func flagTapped(_ number: Int) {
         isSpinning.toggle()
+        // 
         withAnimation { selectedFlag = number }
         
         if number == correctAnswer {
