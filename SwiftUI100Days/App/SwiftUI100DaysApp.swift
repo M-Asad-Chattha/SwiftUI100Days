@@ -11,8 +11,7 @@ import SwiftUI
 struct SwiftUI100DaysApp: App {
     var body: some Scene {
         WindowGroup {
-            // Animations()
-            ContentViewProject_2()
+            Edutainment()
         }
     }
 }
