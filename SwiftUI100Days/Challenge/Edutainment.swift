@@ -14,6 +14,12 @@ struct Edutainment: View {
     // MARK: - Properties
     @State private var numberOfTable = 2
     @State private var selectedNumberForQuestionsToAsk = 0
+    @State private var question = "Enter your answer"
+    @State private var questionNumber = -1
+    @State private var title = "Start Game"
+    @State private var answer = ""
+    @State private var correctAnswer = 0
+    @State private var score = 0
 
     let segments = [5, 10, 20]
 
@@ -28,10 +34,19 @@ struct Edutainment: View {
                     }
                 }
                 .pickerStyle(.segmented)
-                
+
                 Spacer()
-                Button("Start Game", action: startGame)
-                .buttonStyle(.borderedProminent)
+                TextField(question, text: $answer)
+                Text("Score: \(score)")
+                Button("Check Answer", action: onTapCheckAnswer)
+                    .buttonStyle(.borderedProminent)
+                    .disabled(answer == "")
+
+                Spacer()
+                Spacer()
+                Button((questionNumber == -1) ? "Start Game" : "Restart", action: onTapStartGame)
+                    .disabled(questionNumber == -1 ? false : /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                    .buttonStyle(.borderedProminent)
             }
             .padding()
             .navigationTitle("Edutainment")
@@ -47,8 +62,32 @@ extension Edutainment {
 // MARK: - Helper Methods
 extension Edutainment {
   
-    func startGame() {
-        
+    func onTapStartGame() {
+        createQuestion()
+        questionNumber = 1
+    }
+    
+    func onTapCheckAnswer() {
+        checkAnswer()
+    }
+    
+    func createQuestion() {
+        let randomNumber = Int.random(in: 1...segments[selectedNumberForQuestionsToAsk])
+        correctAnswer = numberOfTable * randomNumber
+        question = "\(numberOfTable) x \(randomNumber) = ?"
+        questionNumber += 1
+    }
+    
+    func checkAnswer() {
+        if correctAnswer == Int(answer) { score += 1 }
+        answer = ""
+        print("questionNumber: \(questionNumber) == segments[selectedNumberForQuestionsToAsk]: \(segments[selectedNumberForQuestionsToAsk])")
+        if questionNumber == segments[selectedNumberForQuestionsToAsk] {
+            questionNumber = -1
+            question = "Enter your answer"
+        } else {
+            createQuestion()
+        }
     }
 }
 
