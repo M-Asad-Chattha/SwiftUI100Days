@@ -17,6 +17,7 @@
 		DCC83DC62AA313D7001761FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC83DC52AA313D7001761FD /* ContentView.swift */; };
 		DCC83DC82AA313D9001761FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC83DC72AA313D9001761FD /* Assets.xcassets */; };
 		DCC83DCB2AA313D9001761FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC83DCA2AA313D9001761FD /* Preview Assets.xcassets */; };
+		DCDC70A02B22B97700756155 /* Edutainment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDC709F2B22B97700756155 /* Edutainment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		DCC83DC72AA313D9001761FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCC83DCA2AA313D9001761FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DCC83DD12AA3D65C001761FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DCDC709F2B22B97700756155 /* Edutainment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edutainment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */,
+				DCDC709F2B22B97700756155 /* Edutainment.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			files = (
 				AD2FBFC02AFE5D6700E0D39E /* WordScramble.swift in Sources */,
 				DCC83DC62AA313D7001761FD /* ContentView.swift in Sources */,
+				DCDC70A02B22B97700756155 /* Edutainment.swift in Sources */,
 				DC55504F2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift in Sources */,
 				DCC3A66C2AB94F6000B76961 /* ContentViewProject_3.swift in Sources */,
 				DCC83DC42AA313D7001761FD /* SwiftUI100DaysApp.swift in Sources */,
@@ -332,7 +336,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -364,7 +368,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
