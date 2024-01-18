@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct iExpense: View {
+
+    @AppStorage("tapCount") private var tapCount = 0
+
     var body: some View {
 
-        Text("Hello, World!")
+        Button("Tap Count: \(tapCount)") {
+            tapCount += 1
+        }
     }
 }
 
