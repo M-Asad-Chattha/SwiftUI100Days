@@ -7,10 +7,28 @@
 
 import SwiftUI
 
+struct User: Codable {
+    let firstName: String
+    let lastName: String
+}
+
 struct iExpense: View {
+
+    let user = User(firstName: "Asad", lastName: "Chattha")
+
     var body: some View {
 
-        Text("Hello, World!")
+        Button("Load Data") {
+            let encoder = JSONEncoder()
+            let data = try? encoder.encode(user)
+            UserDefaults.standard.setValue(data, forKey: "user")
+            
+            // Read Data
+            let savedData = UserDefaults.standard.data(forKey: "user")!
+            let decoder = JSONDecoder()
+            let savedUser = try? decoder.decode(User.self, from: savedData)
+            dump(savedUser)
+        }
     }
 }
 
