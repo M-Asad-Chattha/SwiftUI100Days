@@ -25,6 +25,7 @@ struct iExpenseContentView: View {
                         Spacer()
 
                         Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                            .expenseColor(for: item.amount)
                     }
                 }
                 .onDelete(perform: removeItem)
