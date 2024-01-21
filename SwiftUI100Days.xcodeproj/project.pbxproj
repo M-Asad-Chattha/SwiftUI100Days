@@ -11,14 +11,17 @@
 		ADC06A432B04F8A000924D6A /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = ADC06A422B04F8A000924D6A /* start.txt */; };
 		DC55504F2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */; };
 		DC5550532AA507E50028D3F0 /* ContentViewProject_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5550522AA507E50028D3F0 /* ContentViewProject_2.swift */; };
+		DC8537CE2B5D058900893EF7 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8537CD2B5D058900893EF7 /* Expenses.swift */; };
 		DC8BDB5E2B0DA9D40004ABA2 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8BDB5D2B0DA9D40004ABA2 /* Animations.swift */; };
+		DCA4657F2B5C026700B4362E /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA4657E2B5C026700B4362E /* AddView.swift */; };
+		DCA465812B5C044D00B4362E /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA465802B5C044D00B4362E /* ExpenseItem.swift */; };
 		DCC3A66C2AB94F6000B76961 /* ContentViewProject_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC3A66B2AB94F6000B76961 /* ContentViewProject_3.swift */; };
 		DCC83DC42AA313D7001761FD /* SwiftUI100DaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC83DC32AA313D7001761FD /* SwiftUI100DaysApp.swift */; };
 		DCC83DC62AA313D7001761FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC83DC52AA313D7001761FD /* ContentView.swift */; };
 		DCC83DC82AA313D9001761FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC83DC72AA313D9001761FD /* Assets.xcassets */; };
 		DCC83DCB2AA313D9001761FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC83DCA2AA313D9001761FD /* Preview Assets.xcassets */; };
 		DCDC70A02B22B97700756155 /* Edutainment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDC709F2B22B97700756155 /* Edutainment.swift */; };
-		DCEAF8C12B584A73002FB457 /* iExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEAF8C02B584A73002FB457 /* iExpense.swift */; };
+		DCEAF8C12B584A73002FB457 /* iExpenseContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEAF8C02B584A73002FB457 /* iExpenseContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +29,10 @@
 		ADC06A422B04F8A000924D6A /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 		DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewChallenge_1.swift; sourceTree = "<group>"; };
 		DC5550522AA507E50028D3F0 /* ContentViewProject_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewProject_2.swift; sourceTree = "<group>"; };
+		DC8537CD2B5D058900893EF7 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 		DC8BDB5D2B0DA9D40004ABA2 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		DCA4657E2B5C026700B4362E /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		DCA465802B5C044D00B4362E /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
 		DCC3A66B2AB94F6000B76961 /* ContentViewProject_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewProject_3.swift; sourceTree = "<group>"; };
 		DCC83DC02AA313D7001761FD /* SwiftUI100Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI100Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC83DC32AA313D7001761FD /* SwiftUI100DaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI100DaysApp.swift; sourceTree = "<group>"; };
@@ -35,7 +41,7 @@
 		DCC83DCA2AA313D9001761FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DCC83DD12AA3D65C001761FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DCDC709F2B22B97700756155 /* Edutainment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edutainment.swift; sourceTree = "<group>"; };
-		DCEAF8C02B584A73002FB457 /* iExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpense.swift; sourceTree = "<group>"; };
+		DCEAF8C02B584A73002FB457 /* iExpenseContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +71,7 @@
 				DCC3A66B2AB94F6000B76961 /* ContentViewProject_3.swift */,
 				AD2FBFBF2AFE5D6700E0D39E /* WordScramble.swift */,
 				DC8BDB5D2B0DA9D40004ABA2 /* Animations.swift */,
-				DCEAF8C02B584A73002FB457 /* iExpense.swift */,
+				DCA4657D2B5C024800B4362E /* iExpense */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -77,6 +83,17 @@
 				DCC83DC32AA313D7001761FD /* SwiftUI100DaysApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		DCA4657D2B5C024800B4362E /* iExpense */ = {
+			isa = PBXGroup;
+			children = (
+				DCEAF8C02B584A73002FB457 /* iExpenseContentView.swift */,
+				DCA4657E2B5C026700B4362E /* AddView.swift */,
+				DCA465802B5C044D00B4362E /* ExpenseItem.swift */,
+				DC8537CD2B5D058900893EF7 /* Expenses.swift */,
+			);
+			path = iExpense;
 			sourceTree = "<group>";
 		};
 		DCC83DB72AA313D7001761FD = {
@@ -188,15 +205,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC8537CE2B5D058900893EF7 /* Expenses.swift in Sources */,
 				AD2FBFC02AFE5D6700E0D39E /* WordScramble.swift in Sources */,
 				DCC83DC62AA313D7001761FD /* ContentView.swift in Sources */,
 				DCDC70A02B22B97700756155 /* Edutainment.swift in Sources */,
 				DC55504F2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift in Sources */,
 				DCC3A66C2AB94F6000B76961 /* ContentViewProject_3.swift in Sources */,
 				DCC83DC42AA313D7001761FD /* SwiftUI100DaysApp.swift in Sources */,
+				DCA4657F2B5C026700B4362E /* AddView.swift in Sources */,
+				DCA465812B5C044D00B4362E /* ExpenseItem.swift in Sources */,
 				DC5550532AA507E50028D3F0 /* ContentViewProject_2.swift in Sources */,
 				DC8BDB5E2B0DA9D40004ABA2 /* Animations.swift in Sources */,
-				DCEAF8C12B584A73002FB457 /* iExpense.swift in Sources */,
+				DCEAF8C12B584A73002FB457 /* iExpenseContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
