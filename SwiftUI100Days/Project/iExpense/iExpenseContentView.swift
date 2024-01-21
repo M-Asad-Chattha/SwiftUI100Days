@@ -14,47 +14,8 @@ struct iExpenseContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section("Personal") {
-
-                    ForEach(expenses.items.filter {$0.type == "Personal"}) { item in
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Text(item.name)
-                                    .font(.headline)
-                                
-                                Text(item.type)
-                            }
-                            Spacer()
-                            
-                            Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
-                                .expenseColor(for: item.amount)
-                        }
-                    }
-                    .onDelete { indexSet in
-                        removeItem(at: indexSet, section: "Personal")
-                    }
-                }
-                
-                Section("Business") {
-
-                    ForEach(expenses.items.filter {$0.type == "Business"}) { item in
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Text(item.name)
-                                    .font(.headline)
-                                
-                                Text(item.type)
-                            }
-                            Spacer()
-                            
-                            Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
-                                .expenseColor(for: item.amount)
-                        }
-                    }
-                    .onDelete { indexSet in
-                        removeItem(at: indexSet, section: "Business")
-                    }
-                }
+                ExpenseSection(title: "Personal", expenses: expenses.items.filter {$0.type == "Personal"}, deleteItems: removePersonalItems)
+                ExpenseSection(title: "Business", expenses: expenses.items.filter {$0.type == "Business"}, deleteItems: removeBusinessItems)
             }
             .navigationTitle("iExpense")
             .toolbar {
@@ -77,6 +38,28 @@ extension iExpenseContentView {
         let sectionIndices = expenses.items.filter{$0.type == section}.indices
         let globalIndicesToDelete = offsets.map {sectionIndices[$0]}
         expenses.items.remove(atOffsets: IndexSet(globalIndicesToDelete))
+    }
+
+    func removeItems(at offsets: IndexSet, in inputArray: [ExpenseItem]) {
+        var objectsToDelete = IndexSet()
+
+        for offset in offsets {
+            let item = inputArray[offset]
+            
+            if let index = expenses.items.firstIndex(of: item) {
+                objectsToDelete.insert(index)
+            }
+        }
+
+        expenses.items.remove(atOffsets: objectsToDelete)
+    }
+
+    func removePersonalItems(at offsets: IndexSet) {
+        removeItems(at: offsets, in: expenses.items.filter { $0.type == "Personal" })
+    }
+
+    func removeBusinessItems(at offsets: IndexSet) {
+        removeItems(at: offsets, in: expenses.items.filter { $0.type == "Business" })
     }
 }
 

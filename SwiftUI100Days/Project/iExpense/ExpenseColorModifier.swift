@@ -11,8 +11,18 @@ struct ExpenseColorModifier: ViewModifier {
     let amount: Double
 
     func body(content: Content) -> some View {
-        content
-            .foregroundStyle(getExpenseColor())
+        switch amount {
+        case 0..<10:
+            content
+                .foregroundStyle(.green)
+        case 10..<99:
+            content
+                .foregroundStyle(.yellow)
+        default:
+            content
+                .foregroundStyle(.red)
+                .font(.headline)
+        }
     }
 
     private func getExpenseColor() -> Color {
