@@ -19,7 +19,7 @@ struct WordScramble: View {
     @State private var showingAlert = false
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             List {
                 Section {
                     TextField("Enter your word", text: $newWord)

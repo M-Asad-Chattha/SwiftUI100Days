@@ -7,37 +7,25 @@
 
 import SwiftUI
 
-@Observable
-class Expenses {
-    var items = [ExpenseItem]() {
-        didSet {
-            let encoded = try? JSONEncoder().encode(items)
-            UserDefaults.standard.setValue(encoded, forKey: "Items")
-        }
-    }
-
-    init() {
-        if let savedItems = UserDefaults.standard.data(forKey: "Items") {
-            if let decodedItems = try? JSONDecoder().decode([ExpenseItem].self, from: savedItems) {
-                items = decodedItems
-                return
-            }
-        }
-
-        items = []
-    }
-}
-
 struct iExpenseContentView: View {
-
-    @State private var expenses = Expenses()
+    @State var expenses = Expenses()
     @State private var showingAddExpense = false
 
     var body: some View {
         NavigationStack {
             List {
                 ForEach(expenses.items) { item in
-                    Text(item.name)
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(item.name)
+                                .font(.headline)
+
+                            Text(item.type)
+                        }
+                        Spacer()
+
+                        Text(item.amount, format: .currency(code: "USD"))
+                    }
                 }
                 .onDelete(perform: removeItem)
             }
@@ -57,10 +45,9 @@ struct iExpenseContentView: View {
 // MARK: - Action Methods
 
 extension iExpenseContentView {
-     
+
     func removeItem(at offsets: IndexSet) {
         expenses.items.remove(atOffsets: offsets)
-        
     }
 }
 
