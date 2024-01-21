@@ -14,21 +14,47 @@ struct iExpenseContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
+                Section("Personal") {
 
-                            Text(item.type)
+                    ForEach(expenses.items.filter {$0.type == "Personal"}) { item in
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(item.name)
+                                    .font(.headline)
+                                
+                                Text(item.type)
+                            }
+                            Spacer()
+                            
+                            Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                                .expenseColor(for: item.amount)
                         }
-                        Spacer()
-
-                        Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
-                            .expenseColor(for: item.amount)
+                    }
+                    .onDelete { indexSet in
+                        removeItem(at: indexSet, section: "Personal")
                     }
                 }
-                .onDelete(perform: removeItem)
+                
+                Section("Business") {
+
+                    ForEach(expenses.items.filter {$0.type == "Business"}) { item in
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(item.name)
+                                    .font(.headline)
+                                
+                                Text(item.type)
+                            }
+                            Spacer()
+                            
+                            Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                                .expenseColor(for: item.amount)
+                        }
+                    }
+                    .onDelete { indexSet in
+                        removeItem(at: indexSet, section: "Business")
+                    }
+                }
             }
             .navigationTitle("iExpense")
             .toolbar {
@@ -47,8 +73,10 @@ struct iExpenseContentView: View {
 
 extension iExpenseContentView {
 
-    func removeItem(at offsets: IndexSet) {
-        expenses.items.remove(atOffsets: offsets)
+    func removeItem(at offsets: IndexSet, section: String) {
+        let sectionIndices = expenses.items.filter{$0.type == section}.indices
+        let globalIndicesToDelete = offsets.map {sectionIndices[$0]}
+        expenses.items.remove(atOffsets: IndexSet(globalIndicesToDelete))
     }
 }
 
