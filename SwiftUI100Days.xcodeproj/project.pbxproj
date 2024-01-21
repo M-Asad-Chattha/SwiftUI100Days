@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AD2FBFC02AFE5D6700E0D39E /* WordScramble.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2FBFBF2AFE5D6700E0D39E /* WordScramble.swift */; };
 		ADC06A432B04F8A000924D6A /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = ADC06A422B04F8A000924D6A /* start.txt */; };
+		DC40F0142B5D466D00AAD341 /* ExpenseColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC40F0132B5D466D00AAD341 /* ExpenseColorModifier.swift */; };
+		DC40F0162B5D6AB100AAD341 /* ExpenseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC40F0152B5D6AB100AAD341 /* ExpenseSection.swift */; };
 		DC55504F2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */; };
 		DC5550532AA507E50028D3F0 /* ContentViewProject_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5550522AA507E50028D3F0 /* ContentViewProject_2.swift */; };
 		DC8537CE2B5D058900893EF7 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8537CD2B5D058900893EF7 /* Expenses.swift */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		AD2FBFBF2AFE5D6700E0D39E /* WordScramble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScramble.swift; sourceTree = "<group>"; };
 		ADC06A422B04F8A000924D6A /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
+		DC40F0132B5D466D00AAD341 /* ExpenseColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseColorModifier.swift; sourceTree = "<group>"; };
+		DC40F0152B5D6AB100AAD341 /* ExpenseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseSection.swift; sourceTree = "<group>"; };
 		DC55504E2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewChallenge_1.swift; sourceTree = "<group>"; };
 		DC5550522AA507E50028D3F0 /* ContentViewProject_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewProject_2.swift; sourceTree = "<group>"; };
 		DC8537CD2B5D058900893EF7 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				DCA4657E2B5C026700B4362E /* AddView.swift */,
 				DCA465802B5C044D00B4362E /* ExpenseItem.swift */,
 				DC8537CD2B5D058900893EF7 /* Expenses.swift */,
+				DC40F0132B5D466D00AAD341 /* ExpenseColorModifier.swift */,
+				DC40F0152B5D6AB100AAD341 /* ExpenseSection.swift */,
 			);
 			path = iExpense;
 			sourceTree = "<group>";
@@ -213,7 +219,9 @@
 				DCC3A66C2AB94F6000B76961 /* ContentViewProject_3.swift in Sources */,
 				DCC83DC42AA313D7001761FD /* SwiftUI100DaysApp.swift in Sources */,
 				DCA4657F2B5C026700B4362E /* AddView.swift in Sources */,
+				DC40F0162B5D6AB100AAD341 /* ExpenseSection.swift in Sources */,
 				DCA465812B5C044D00B4362E /* ExpenseItem.swift in Sources */,
+				DC40F0142B5D466D00AAD341 /* ExpenseColorModifier.swift in Sources */,
 				DC5550532AA507E50028D3F0 /* ContentViewProject_2.swift in Sources */,
 				DC8BDB5E2B0DA9D40004ABA2 /* Animations.swift in Sources */,
 				DCEAF8C12B584A73002FB457 /* iExpenseContentView.swift in Sources */,
