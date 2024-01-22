@@ -7,30 +7,16 @@
 
 import SwiftUI
 
-struct CustomText: View {
-    let text: String
-    
-    var body: some View {
-        Text(text)
-    }
-    
-    init(text: String) {
-        print("Creating a new CustomTextx")
-        self.text = text
-    }
-}
-
 struct MoonshotContentView: View {
 
     var body: some View {
-        ScrollView(.vertical) {
-            LazyVStack(spacing: 10) {
-                ForEach(0..<100) {
-                    CustomText(text: "Item \($0)")
-                        .font(.title)
+        NavigationStack {
+            List(0..<100) {row in
+                NavigationLink("Row \(row)") {
+                    Text("Detail \(row)")
                 }
             }
-            .frame(maxWidth: .infinity)
+            .navigationTitle("SwiftUI")
         }
     }
 }
