@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct MoonshotContentView: View {
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image(.example)
+            .resizable()
+            .scaledToFit()
+            .containerRelativeFrame(.horizontal) { size, axis in
+                size * 0.8
+            }
     }
 }
 
