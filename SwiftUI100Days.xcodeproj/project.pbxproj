@@ -77,6 +77,8 @@
 				DCA9776E2B60AEDB001D106F /* Bundle+Codable.swift */,
 				DCA977692B60ABB6001D106F /* astronauts.json */,
 				DCA977682B60ABB6001D106F /* missions.json */,
+				DCA9776C2B60ACCF001D106F /* Astronaut.swift */,
+				DCA9776E2B60AEDB001D106F /* Bundle+Codable.swift */,
 			);
 			path = Moonshot;
 			sourceTree = "<group>";
