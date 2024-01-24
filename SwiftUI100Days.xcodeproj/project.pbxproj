@@ -20,6 +20,8 @@
 		DCA465812B5C044D00B4362E /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA465802B5C044D00B4362E /* ExpenseItem.swift */; };
 		DCA9776A2B60ABB6001D106F /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = DCA977682B60ABB6001D106F /* missions.json */; };
 		DCA9776B2B60ABB6001D106F /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = DCA977692B60ABB6001D106F /* astronauts.json */; };
+		DCA9776D2B60ACCF001D106F /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA9776C2B60ACCF001D106F /* Astronaut.swift */; };
+		DCA9776F2B60AEDB001D106F /* Bundle+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA9776E2B60AEDB001D106F /* Bundle+Codable.swift */; };
 		DCC3A66C2AB94F6000B76961 /* ContentViewProject_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC3A66B2AB94F6000B76961 /* ContentViewProject_3.swift */; };
 		DCC83DC42AA313D7001761FD /* SwiftUI100DaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC83DC32AA313D7001761FD /* SwiftUI100DaysApp.swift */; };
 		DCC83DC62AA313D7001761FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC83DC52AA313D7001761FD /* ContentView.swift */; };
@@ -43,6 +45,8 @@
 		DCA465802B5C044D00B4362E /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
 		DCA977682B60ABB6001D106F /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
 		DCA977692B60ABB6001D106F /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
+		DCA9776C2B60ACCF001D106F /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
+		DCA9776E2B60AEDB001D106F /* Bundle+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Codable.swift"; sourceTree = "<group>"; };
 		DCC3A66B2AB94F6000B76961 /* ContentViewProject_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewProject_3.swift; sourceTree = "<group>"; };
 		DCC83DC02AA313D7001761FD /* SwiftUI100Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI100Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC83DC32AA313D7001761FD /* SwiftUI100DaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI100DaysApp.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				DC40F0182B5D8EF800AAD341 /* MoonshotContentView.swift */,
+				DCA9776C2B60ACCF001D106F /* Astronaut.swift */,
+				DCA9776E2B60AEDB001D106F /* Bundle+Codable.swift */,
 				DCA977692B60ABB6001D106F /* astronauts.json */,
 				DCA977682B60ABB6001D106F /* missions.json */,
 			);
@@ -235,12 +241,14 @@
 				DCC83DC62AA313D7001761FD /* ContentView.swift in Sources */,
 				DCDC70A02B22B97700756155 /* Edutainment.swift in Sources */,
 				DC55504F2AA4EDCC0028D3F0 /* ContentViewChallenge_1.swift in Sources */,
+				DCA9776F2B60AEDB001D106F /* Bundle+Codable.swift in Sources */,
 				DCC3A66C2AB94F6000B76961 /* ContentViewProject_3.swift in Sources */,
 				DC40F0192B5D8EF800AAD341 /* MoonshotContentView.swift in Sources */,
 				DCC83DC42AA313D7001761FD /* SwiftUI100DaysApp.swift in Sources */,
 				DCA4657F2B5C026700B4362E /* AddView.swift in Sources */,
 				DC40F0162B5D6AB100AAD341 /* ExpenseSection.swift in Sources */,
 				DCA465812B5C044D00B4362E /* ExpenseItem.swift in Sources */,
+				DCA9776D2B60ACCF001D106F /* Astronaut.swift in Sources */,
 				DC40F0142B5D466D00AAD341 /* ExpenseColorModifier.swift in Sources */,
 				DC5550532AA507E50028D3F0 /* ContentViewProject_2.swift in Sources */,
 				DC8BDB5E2B0DA9D40004ABA2 /* Animations.swift in Sources */,

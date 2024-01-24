@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct MoonshotContentView: View {
-
+    let astronauts = Bundle.main.load("astronauts.json")
+    
     var body: some View {
-        Text("Hello world!")
+        Text(String(astronauts.count))
     }
 }
 
