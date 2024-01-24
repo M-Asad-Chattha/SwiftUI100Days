@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct MoonshotContentView: View {
-
-    let astronauts = Bundle.main.load("astronauts.json")
+    let astronauts: [String: Astronaut] = Bundle.main.load("astronauts.json")
+    let mission: [Mission] = Bundle.main.load("missions.json")
     
     var body: some View {
-        Text(String(astronauts.count))
+        Text(String(mission.count))
     }
 }
 
