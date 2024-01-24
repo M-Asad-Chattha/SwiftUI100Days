@@ -7,20 +7,10 @@
 
 import SwiftUI
 
-var layout = [
-    GridItem(.adaptive(minimum: 80, maximum: 120))
-]
-
 struct MoonshotContentView: View {
 
     var body: some View {
-        ScrollView(.horizontal) {
-            LazyHGrid(rows: layout) {
-                ForEach(0..<100) {
-                    Text("Item \($0)")
-                }
-            }
-        }
+        Text("Hello world!")
     }
 }
 
