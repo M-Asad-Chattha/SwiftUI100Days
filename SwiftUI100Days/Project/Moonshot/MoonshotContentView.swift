@@ -8,15 +8,33 @@
 import SwiftUI
 
 struct MoonshotContentView: View {
-
+    let astronauts: [String: Astronaut] = Bundle.main.load("astronauts.json")
+    let missions: [Mission] = Bundle.main.load("missions.json")
+    
+    let columns = [GridItem(.adaptive(minimum: 150))]
+    
     var body: some View {
         NavigationStack {
-            List(0..<100) {row in
-                NavigationLink("Row \(row)") {
-                    Text("Detail \(row)")
+            ScrollView {
+                LazyVGrid(columns: columns) {
+                    ForEach(missions) { mission in
+                        VStack {
+                            Image(mission.image)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxWidth: 100, maxHeight: 100)
+                            
+                            VStack {
+                                Text(mission.displayName)
+                                    .font(.headline)
+                                Text(mission.formattedLaunchDate)
+                                    .font(.caption)
+                            }
+                        }
+                    }
                 }
             }
-            .navigationTitle("SwiftUI")
+            .navigationTitle("Moonshot")
         }
     }
 }
