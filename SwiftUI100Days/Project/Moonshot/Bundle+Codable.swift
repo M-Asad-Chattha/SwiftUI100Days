@@ -9,7 +9,7 @@ import Foundation
 
 extension Bundle {
 
-    func load<T: Codable>(_ file: String) -> T {
+    func decode<T: Codable>(_ file: String) -> T {
         guard let url = Bundle.main.url(forResource: file, withExtension: nil) else {
             fatalError("Failed to locate \(file) in Bundle.")
         }
