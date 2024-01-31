@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MoonshotContentView: View {
-    let astronauts: [String: Astronaut] = Bundle.main.load("astronauts.json")
-    let missions: [Mission] = Bundle.main.load("missions.json")
+    let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
+    let missions: [Mission] = Bundle.main.decode("missions.json")
     
     let columns = [GridItem(.adaptive(minimum: 150))]
     
@@ -18,23 +18,38 @@ struct MoonshotContentView: View {
             ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach(missions) { mission in
-                        VStack {
-                            Image(mission.image)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(maxWidth: 100, maxHeight: 100)
-                            
+                        NavigationLink {
+                            MissionView(mission: mission, astronauts: astronauts)
+                        } label: {
                             VStack {
-                                Text(mission.displayName)
-                                    .font(.headline)
-                                Text(mission.formattedLaunchDate)
-                                    .font(.caption)
+                                Image(mission.image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(maxWidth: 100, maxHeight: 100)
+                                    .padding()
+                                
+                                VStack {
+                                    Text(mission.displayName)
+                                        .font(.headline)
+                                        .foregroundStyle(.white)
+                                    Text(mission.formattedLaunchDate)
+                                        .font(.caption)
+                                        .foregroundStyle(.white.opacity(0.5))
+                                }
+                                .padding(.vertical)
+                                .frame(maxWidth: .infinity)
+                                .background(.lightBackground)
                             }
+                            .clipShape(.rect(cornerRadius: 10))
+                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(.lightBackground))
                         }
                     }
                 }
+                .padding([.horizontal, .bottom])
             }
             .navigationTitle("Moonshot")
+            .background(.darkBackground)
+            .preferredColorScheme(.dark)
         }
     }
 }
