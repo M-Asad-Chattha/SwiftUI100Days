@@ -61,7 +61,7 @@
 		DCC83DC52AA313D7001761FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DCC83DC72AA313D9001761FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCC83DCA2AA313D9001761FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DCC83DD12AA3D65C001761FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DCC83DD12AA3D65C001761FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCDC709F2B22B97700756155 /* Edutainment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edutainment.swift; sourceTree = "<group>"; };
 		DCEAF8C02B584A73002FB457 /* iExpenseContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC18B5132B9DB79100B5B43D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADC06A422B04F8A000924D6A /* start.txt */,
+				DCC83DC72AA313D9001761FD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DC40F0172B5D8ED100AAD341 /* Moonshot */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,12 +165,11 @@
 		DCC83DC22AA313D7001761FD /* SwiftUI100Days */ = {
 			isa = PBXGroup;
 			children = (
+				DCC83DD12AA3D65C001761FD /* Info.plist */,
+				DC5550512AA507A00028D3F0 /* App */,
 				DC55504D2AA4ED2C0028D3F0 /* Challenge */,
 				DC5550502AA507870028D3F0 /* Project */,
-				DC5550512AA507A00028D3F0 /* App */,
-				DCC83DD12AA3D65C001761FD /* Info.plist */,
-				ADC06A422B04F8A000924D6A /* start.txt */,
-				DCC83DC72AA313D9001761FD /* Assets.xcassets */,
+				DC18B5132B9DB79100B5B43D /* Resources */,
 				DCC83DC92AA313D9001761FD /* Preview Content */,
 			);
 			path = SwiftUI100Days;
