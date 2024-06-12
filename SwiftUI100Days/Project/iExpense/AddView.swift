@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddView: View {
     var expenses: Expenses
-    @Environment (\.dismiss) var dismiss
+    @Environment(\.dismiss) var dismiss
 
     @State private var name = ""
     @State private var type = "Personal"
