@@ -11,7 +11,7 @@ struct AddView: View {
     var expenses: Expenses
     @Environment(\.dismiss) var dismiss
 
-    //.....
+    //......
     @State private var name = ""
     @State private var type = "Personal"
     @State private var amount = 0.0
